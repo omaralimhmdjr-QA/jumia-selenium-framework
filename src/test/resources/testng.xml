@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Jumia Suite" verbose="1">
+  <listeners>
+    <listener class-name="utils.TestListener"/>
+  </listeners>
+  <test name="Jumia Web Tests">
+    <classes>
+      <class name="tests.HomePageTests"/>
+      <class name="tests.SearchTests"/>
+      <class name="tests.ProductTests"/>
+      <class name="tests.CartTests"/>
+    </classes>
+  </test>
+</suite>
