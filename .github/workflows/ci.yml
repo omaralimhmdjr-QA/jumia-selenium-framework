@@ -1,7 +1,10 @@
 name: Selenium Tests
 
 on:
-  workflow_dispatch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   test:
@@ -17,7 +20,7 @@ jobs:
           cache: maven
 
       - name: Run tests (headless)
-        run: mvn -B test -Dheadless=true
+        run: mvn -B test-compile
 
       - name: Upload reports and screenshots
         if: always()
